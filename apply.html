@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply — Xwing Ventures</title>
+  <meta name="description" content="Apply for a grant or investment from Xwing Ventures. We back early-stage fintech and infratech companies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">X<span>wing</span></a>
+      <ul class="nav-links">
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="solution.html">Solution</a></li>
+        <li><a href="apply.html">Apply</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="section-label">Grant Application</p>
+      <h1>Tell us what<br />you're <em style="font-style:normal;color:var(--accent)">building.</em></h1>
+      <p style="max-width:520px;margin-top:24px;color:var(--muted-light);font-size:1.05rem;line-height:1.75;">
+        We review every application. If your work sits at the intersection
+        of financial infrastructure, wallet technology, or the payment rails
+        of tomorrow — we want to hear from you.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== FORM ===== -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:80px;align-items:start;">
+
+        <!-- Left: Form -->
+        <div>
+          <form id="applyForm" novalidate>
+            <div class="form-grid">
+
+              <!-- Founder info -->
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="linkedin">LinkedIn Profile</label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/..." />
+              </div>
+
+              <!-- Company info -->
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Acme Financial Inc." required />
+              </div>
+              <div class="form-group">
+                <label for="website">Company Website</label>
+                <input type="url" id="website" name="website" placeholder="https://yourcompany.com" />
+              </div>
+              <div class="form-group">
+                <label for="founded">Year Founded</label>
+                <input type="number" id="founded" name="founded" placeholder="2023" min="2010" max="2026" />
+              </div>
+              <div class="form-group">
+                <label for="stage">Stage</label>
+                <select id="stage" name="stage" required>
+                  <option value="" disabled selected>Select stage</option>
+                  <option value="pre-seed">Pre-Seed</option>
+                  <option value="seed">Seed</option>
+                  <option value="series-a">Series A</option>
+                  <option value="grant-only">Grant Only (non-dilutive)</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <!-- Sector -->
+              <div class="form-group">
+                <label for="sector">Primary Sector</label>
+                <select id="sector" name="sector" required>
+                  <option value="" disabled selected>Select sector</option>
+                  <option value="digital-wallets">Digital Wallets &amp; Custody</option>
+                  <option value="payment-infra">Payment Infrastructure</option>
+                  <option value="blockchain">Blockchain Settlement</option>
+                  <option value="qr-payments">QR Payment Rails</option>
+                  <option value="5g-fintech">5G-Enabled Fintech</option>
+                  <option value="cbdc">CBDC Infrastructure</option>
+                  <option value="regtech">Regulatory Technology</option>
+                  <option value="embedded-finance">Embedded Finance</option>
+                  <option value="defi-institutional">DeFi for Institutions</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="country">Country of Incorporation</label>
+                <input type="text" id="country" name="country" placeholder="e.g. United Kingdom" required />
+              </div>
+
+              <!-- Funding ask -->
+              <div class="form-group">
+                <label for="amount">Funding Sought (USD)</label>
+                <select id="amount" name="amount">
+                  <option value="" disabled selected>Select range</option>
+                  <option value="under-100k">Under $100K</option>
+                  <option value="100k-500k">$100K – $500K</option>
+                  <option value="500k-1m">$500K – $1M</option>
+                  <option value="1m-3m">$1M – $3M</option>
+                  <option value="3m-plus">$3M+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="teamSize">Team Size</label>
+                <select id="teamSize" name="teamSize">
+                  <option value="" disabled selected>Select size</option>
+                  <option value="solo">Solo Founder</option>
+                  <option value="2-5">2–5</option>
+                  <option value="6-15">6–15</option>
+                  <option value="16-plus">16+</option>
+                </select>
+              </div>
+
+              <!-- Longer fields -->
+              <div class="form-group full">
+                <label for="problem">What specific problem are you solving?</label>
+                <textarea id="problem" name="problem" placeholder="Describe the core problem in 2–4 sentences. Be specific about who suffers from it and the current state of the market." required></textarea>
+              </div>
+              <div class="form-group full">
+                <label for="solution">How does your solution address it?</label>
+                <textarea id="solution" name="solution" placeholder="Explain your technical approach and why it is meaningfully better than what exists today." required></textarea>
+              </div>
+              <div class="form-group full">
+                <label for="traction">Traction &amp; evidence to date</label>
+                <textarea id="traction" name="traction" placeholder="Users, revenue, pilots, partnerships, regulatory approvals — whatever demonstrates real-world validation." style="min-height:100px;"></textarea>
+              </div>
+              <div class="form-group full">
+                <label for="useOfFunds">How will you use this funding?</label>
+                <textarea id="useOfFunds" name="useOfFunds" placeholder="Key milestones you intend to hit with this round and the timeline." style="min-height:100px;"></textarea>
+              </div>
+              <div class="form-group full">
+                <label for="deck">Pitch Deck URL (optional)</label>
+                <input type="url" id="deck" name="deck" placeholder="https://drive.google.com/..." />
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:16px;">
+                  Submit Application
+                </button>
+                <p class="form-note">
+                  We review every application within 10 business days.
+                  We do not share your information with third parties.
+                </p>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Info sidebar -->
+        <aside style="padding-top:8px;">
+          <div style="border-left:1px solid var(--border);padding-left:32px;display:flex;flex-direction:column;gap:40px;">
+
+            <div>
+              <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">What We Fund</p>
+              <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">
+                Early-stage companies — pre-seed through Series A — building
+                financial infrastructure, wallet technology, or payment rails
+                using 5G, QR or blockchain primitives.
+              </p>
+            </div>
+
+            <div>
+              <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Ticket Size</p>
+              <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">
+                Initial grants from $25K. Equity investments from $250K
+                to $3M. Follow-on reserves for top performers.
+              </p>
+            </div>
+
+            <div>
+              <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">What We Provide</p>
+              <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">
+                Capital, regulatory navigation, introductions to our network
+                of licensed financial institutions, and hands-on support
+                during the critical 0→1 phase.
+              </p>
+            </div>
+
+            <div>
+              <p style="font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Timeline</p>
+              <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;">
+                Initial response within 10 business days.
+                Full diligence process: 4–8 weeks.
+                We move quickly for the right companies.
+              </p>
+            </div>
+
+            <div style="border-top:1px solid var(--border);padding-top:32px;">
+              <p style="font-size:0.78rem;color:var(--muted);line-height:1.65;">
+                Questions before applying?<br />
+                <a href="mailto:ventures@xwing.vc" style="color:var(--accent);">ventures@xwing.vc</a>
+              </p>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">X<span>wing</span> Ventures</span>
+      <nav class="footer-links">
+        <a href="problem.html">Problem</a>
+        <a href="solution.html">Solution</a>
+        <a href="apply.html">Apply</a>
+      </nav>
+      <span class="footer-copy">© 2025 Xwing Ventures. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <style>
+    @media (max-width: 900px) {
+      .container > div[style*="grid-template-columns"] {
+        display: block !important;
+      }
+      aside { margin-top: 48px; }
+      aside > div { padding-left: 0 !important; border-left: none !important; border-top: 1px solid var(--border); padding-top: 32px !important; }
+    }
+  </style>
+</body>
+</html>
