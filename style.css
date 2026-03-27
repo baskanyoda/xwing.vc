@@ -1,6 +1,6 @@
 /* ============================================
-   XWING VENTURES — Global Styles
-   Inspired by granite.asia — dark, minimal, premium
+   XWING VENTURES â Global Styles
+   Inspired by granite.asia â dark, minimal, premium
    ============================================ */
 
 :root {
@@ -381,6 +381,17 @@ footer {
   transition: color var(--transition);
 }
 .footer-links a:hover { color: var(--accent); }
+footer nav {
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  height: auto;
+  z-index: auto;
+  border-bottom: none;
+  background: none;
+  padding: 0;
+}
 
 /* ---- PAGE HERO (inner pages) ---- */
 .page-hero {
